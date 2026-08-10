@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Pame & Fede — Nos Casamos</title>
+
+  <!-- Google Fonts: Cormorant Garamond (títulos/nombres) + Great Vibes (script decorativa) + Jost (cuerpo de texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Nuestra hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <button id="btnMusica" class="btn-musica" type="button" aria-label="Reproducir música" aria-pressed="false">
+    <i data-lucide="volume-x"></i>
+  </button>
+
+  <!-- ============================================================
+       1. PORTADA / SOBRE — pantalla completa, bloquea el scroll
+       hasta que el usuario toque "Abrir Invitación"
+  ============================================================ -->
+  <div id="portada" class="portada">
+    <img src="Assets/frase.png" class="portada__frase" alt="Hoy decidimos caminar juntos para siempre">
+
+    <div class="portada__contenido">
+
+
+      <img src="Assets/nombres-portada.png" alt="Pame & Fede — 14.03.2027" class="portada__nombres-img">
+
+      <!-- Cuenta regresiva en la portada -->
+      <div class="countdown__grid countdown__grid--portada" id="countdown">
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-dias">00</span>
+          <span class="countdown__unidad">Días</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-horas">00</span>
+          <span class="countdown__unidad">Horas</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-min">00</span>
+          <span class="countdown__unidad">Min</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-seg">00</span>
+          <span class="countdown__unidad">Seg</span>
+        </div>
+      </div>
+
+      <button id="btnAbrir" class="btn-outline" type="button">
+        <i data-lucide="mail-open"></i>
+        <span>Descubrí los detalles</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       CUERPO PRINCIPAL — oculto/bloqueado hasta abrir la portada
+  ============================================================ -->
+  <main id="cuerpo" class="cuerpo">
+
+    <!-- ---------- 2. HERO / ENCABEZADO INTERNO ---------- -->
+    <section class="seccion hero fade-in">
+      <p class="hero__eyebrow">¡Nos casamos!</p>
+      <img src="Assets/titulo-hero.png" class="hero__nombres-img">
+      <img src="Assets/separador.png" class="hero__separador">
+
+
+    </section>
+
+    <!-- ---------- 3. AGENDAR EN CALENDARIO ---------- -->
+    <section class="seccion calendario fade-in">
+      <div class="tarjeta tarjeta--centro">
+        <h3 class="seccion__titulo">¿Cuándo?</h3>
+        <img src="Assets/calendario.png" class="tarjeta__img">
+
+        <a id="btnCalendar" class="btn-outline" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Casamiento%20Pame%20y%20Fede&dates=20260926T130000/20260926T180000&details=Casamiento%20de%20Pame%20y%20Fede%20-%20Sal%C3%B3n%20San%20Pietro&location=Sal%C3%B3n%20San%20Pietro%2C%20Dr.%20Rodolfo%20Monte%201246%2C%20Mor%C3%B3n%2C%20Buenos%20Aires&ctz=America%2FArgentina%2FBuenos_Aires" target="_blank" rel="noopener">
+          <i data-lucide="calendar-plus"></i>
+          <span>Agendá la fecha</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- 4. UBICACIÓN ---------- -->
+    <section class="seccion ubicacion fade-in">
+
+      <div class="tarjeta tarjeta--centro">
+        <h3 class="seccion__titulo">¿Dónde?</h3>
+        <img src="Assets/mapa.png" class="tarjeta__img">
+        <p class="ubicacion__nombre">Salón San Pietro</p>
+        <p class="ubicacion__direccion">Dr. Rodolfo Monte 1246, Morón, Buenos Aires</p>
+
+        <a class="btn-outline"
+          href="https://www.google.com/maps/search/?api=1&query=Dr.+Rodolfo+Monte+1246,+B1708+Mor%C3%B3n,+Provincia+de+Buenos+Aires"
+          target="_blank" rel="noopener">
+          <i data-lucide="navigation"></i>
+          <span>Ver ubicación</span>
+        </a>
+      </div>
+    </section>
+
+   <img src="Assets/separador.png" class="hero__separador hero__separador--intermedio">
+
+    <!-- ---------- 5. ITINERARIO ---------- -->
+    <section class="seccion itinerario fade-in">
+      <h3 class="seccion__titulo">Itinerario</h3>
+
+      <!-- Subsección Civil -->
+      <div class="tarjeta tarjeta--centro" style="margin-bottom: 32px;">
+        <img src="Assets/civil.png" class="icon__img" style="margin-bottom: 2px;">
+        <h4 class="seccion__titulo" style="font-size: 1.4rem; margin-bottom: 3px;">Registro Civil</h4>
+        <p class="ubicacion__direccion" style="margin-bottom: 0;">
+          Viernes 25 de septiembre de 2026, 10:30hs<br>
+          Registro Civil de Morón<br>
+          <small>Nuestra Señora del Buen Viaje 470, Morón</small>
+        </p>
+      </div>
+
+      <h4 class="seccion__titulo" style="font-size: 1.4rem; margin-bottom: 3px;">Festejo</h4>
+      <p class="itinerario__desc">Sábado 26 de Septiembre de 2026, 13:00hs</p>
+      <div class="itinerario__timeline-wrap">
+        <img src="Assets/timeline.png" class="itinerario__timeline">
+      </div>
+    </section>
+
+    <!-- ---------- 6. DRESSCODE ---------- -->
+   <img src="Assets/separador.png" class="hero__separador hero__separador--intermedio">
+    <section class="seccion dresscode fade-in">
+      <div class="tarjeta tarjeta--centro">
+        <img src="Assets/vestimenta.png" class="icon__img" style="margin-bottom: 2px;">
+        <p class="dresscode__etiqueta">Elegante sport</p>
+        <p class="dresscode__desc">Evitar usar vestimenta en colores blanco, marfil y beige
+          claro así podemos reservarle ese protagonismo exclusivamente a los novios.</p>
+      </div>
+    </section>
+
+    <!-- ---------- 7. HASHTAG DE INSTAGRAM ---------- -->
+    <section class="seccion hashtag fade-in">
+      <div class="hashtag__caja">
+        <img src="Assets/camara.png" class="icon__img" style="margin-bottom: 2px;">
+        <p class="hashtag__texto">Queremos ver el festejo a través de tus ojos. Compartí tus fotos y videos en Instagram con nuestro hashtag oficial. Así podremos guardar todos estos momentos especiales en un solo lugar.</p>
+        <p class="hashtag__tag" id="hashtagTexto">#PameYFede2026</p>
+        <button id="btnCopiarHashtag" class="btn-outline btn-outline--sm" type="button">
+          <i data-lucide="copy"></i>
+          <span>Copiar Hashtag</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ---------- 8. REGALOS / DATOS BANCARIOS ---------- -->
+    <section class="seccion regalos fade-in">
+      
+      <div class="tarjeta tarjeta--centro">
+        <img src="Assets/regalo.png" class="icon__img" style="margin-bottom: 2px;">
+        <p class="regalos__texto">
+          Tu presencia es el regalo más importante. Si además querés colaborar con nuestra luna de miel, podés hacerlo
+          acá.
+        </p>
+        <button id="btnAbrirModal" class="btn-outline btn-outline--sm" type="button">
+          <i data-lucide="wallet"></i>
+          <span>Ver Datos Bancarios</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ---------- 9. RSVP ---------- -->
+    <section class="seccion rsvp fade-in">
+      <h3 class="seccion__titulo">Confirmar Asistencia</h3>
+      <p class="rsvp__subtexto">Por favor confirmá tu presencia antes del 26 de Agosto</p>
+
+      <div class="rsvp__botones">
+        <a class="btn-outline"
+          href="https://wa.me/5491168140485?text=%C2%A1Hola!%20Quiero%20confirmar%20mi%20asistencia%20para%20celebrar%20junto%20a%20ustedes%20"
+          target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span>Confirmar con la Novia</span>
+        </a>
+        <a class="btn-outline"
+          href="https://wa.me/5491133378793?text=%C2%A1Hola!%20Quiero%20confirmar%20mi%20asistencia%20para%20celebrar%20junto%20a%20ustedes%20"
+          target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span>Confirmar con el Novio</span>
+        </a>
+      </div>
+    </section>
+
+<img src="Assets/separador.png" class="hero__separador hero__separador--intermedio">
+
+    <!-- ---------- 10. FOOTER ---------- -->
+    <footer class="footer fade-in">
+      <p class="footer__iniciales">P &amp; F</p>
+      <p class="footer__gracias">Gracias por ser parte de este día</p>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================
+       MODAL — Datos bancarios (oculto por defecto, controlado por JS)
+  ============================================================ -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+      <button id="btnCerrarModal" class="modal__cerrar" type="button" aria-label="Cerrar">
+        <i data-lucide="x"></i>
+      </button>
+
+      <h4 id="modalTitulo" class="modal__titulo">Datos Bancarios</h4>
+
+      <div class="modal__campo">
+        <span class="modal__label">Banco</span>
+        <span class="modal__valor">Banco Nación</span>
+      </div>
+
+      <div class="modal__campo">
+        <span class="modal__label">Titular</span>
+        <span class="modal__valor">Jesica Pamela Aguilar</span>
+      </div>
+
+      <div class="modal__campo modal__campo--copiable">
+        <div>
+          <span class="modal__label">Alias</span>
+          <span class="modal__valor" id="valorAlias">alba.coche.auto</span>
+        </div>
+        <button class="btn-copiar" data-copiar="valorAlias" type="button" aria-label="Copiar alias">
+          <i data-lucide="copy"></i>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TOAST — notificación breve para "copiado al portapapeles"
+  ============================================================ -->
+  <div id="toast" class="toast">Copiado ✓</div>
+
+  <!-- Nuestro JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
