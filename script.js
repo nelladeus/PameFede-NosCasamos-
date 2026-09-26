@@ -161,8 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
     elSeg.textContent = conCeroAdelante(seg);
   }
 
+    let intervaloCountdown;
   actualizarCountdown(); // primer render inmediato, sin esperar 1 segundo
-  const intervaloCountdown = setInterval(actualizarCountdown, 1000);
+  intervaloCountdown = setInterval(actualizarCountdown, 1000);
 
 
   /* ------------------------------------------------------------------------
